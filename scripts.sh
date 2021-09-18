@@ -29,3 +29,7 @@ echo "0" > /sys/block/sdc/queue/iostats
 echo "0" > /sys/block/sdd/queue/iostats
 echo "0" > /sys/block/sde/queue/iostats
 echo "0" > /sys/block/sdf/queue/iostats
+
+# 禁用binder调试 (来自: kdrag0n)
+echo "0" > /sys/module/binder/parameters/debug_mask
+echo "0" > /sys/module/binder_alloc/parameters/debug_mask
