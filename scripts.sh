@@ -21,3 +21,11 @@
 #  因为用户大部分喜欢刷官改包, 官改包基本都是解密data状态,
 #  所以您需要手动将脚本中的 "dm-5" 的字样替换为 "sda34" .
 #
+
+# 禁用磁盘I/O统计 (来自: kdrag0n)
+echo "0" > /sys/block/sda/queue/iostats
+echo "0" > /sys/block/sdb/queue/iostats
+echo "0" > /sys/block/sdc/queue/iostats
+echo "0" > /sys/block/sdd/queue/iostats
+echo "0" > /sys/block/sde/queue/iostats
+echo "0" > /sys/block/sdf/queue/iostats
