@@ -91,3 +91,7 @@ echo "0" > /proc/sys/kernel/sched_schedstats
 # 调整内存统计间隔 (默认为1, 也就是1秒)
 echo "20" > /proc/sys/vm/stat_interval
 ## END: Amktiao结束: 调整内存统计间隔 (默认为1, 也就是1秒)
+## ADD: Amktiao添加: 禁用 禁用sched_autogroup
+# 禁用sched_autogroup (在移动端设备上无用)
+echo "0" > /proc/sys/kernel/sched_autogroup_enabled
+## END: Amktiao结束: 禁用 禁用sched_autogroup
