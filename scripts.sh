@@ -58,3 +58,7 @@ echo "128" > /sys/block/${userdata}/queue/read_ahead_kb
 echo "36" > /sys/block/${userdata}/queue/nr_requests
 ## END: Amktiao结束: 为dm加密设备调整预读与NR参数 (userdata)
 
+## ADD: Amktiao添加: 为ZRAM设备调整预读与NR参数 (zram0)
+echo "128" > /sys/block/zram0/queue/read_ahead_kb
+echo "36" > /sys/block/zram0/queue/nr_requests
+## END: Amktiao结束: 为ZRAM设备调整预读与NR参数 (zram0)
