@@ -62,3 +62,6 @@ echo "36" > /sys/block/${userdata}/queue/nr_requests
 echo "128" > /sys/block/zram0/queue/read_ahead_kb
 echo "36" > /sys/block/zram0/queue/nr_requests
 ## END: Amktiao结束: 为ZRAM设备调整预读与NR参数 (zram0)
+## ADD: Amktiao添加: 调整页面簇 (low-mem)
+echo "0" > /proc/sys/vm/page-cluster
+## END: Amktiao结束: 调整页面簇 (low-mem)
