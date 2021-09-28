@@ -21,3 +21,7 @@
 #  因为用户大部分喜欢刷官改包, 官改包基本都是解密data状态,
 #  所以您需要手动将脚本中的 "dm-5" 的字样替换为 "sda34" .
 #
+
+## ADD: Amktiao添加: 设置获取userdata分区变量 (f2fs需要)
+userdata=$(getprop dev.mnt.blk.data)
+## END: Amktiao结束: 设置获取userdata分区变量 (f2fs需要)
