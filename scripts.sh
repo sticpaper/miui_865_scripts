@@ -34,3 +34,8 @@ echo "0" > /sys/block/sdd/queue/iostats
 echo "0" > /sys/block/sde/queue/iostats
 echo "0" > /sys/block/sdf/queue/iostats
 ## END: Amktiao结束: 禁用sd<x>分区的I/O读写统计
+## ADD: Amktiao添加: 禁用binder与分配工具的日志
+# 禁用binder调试 (来自: kdrag0n)
+echo "0" > /sys/module/binder/parameters/debug_mask
+echo "0" > /sys/module/binder_alloc/parameters/debug_mask
+## END: Amktiao结束: 禁用binder与分配工具的日志
