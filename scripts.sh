@@ -53,3 +53,8 @@ echo "36" > /sys/block/sda/queue/nr_requests
 echo "128" > /sys/block/sde/queue/read_ahead_kb
 echo "36" > /sys/block/sde/queue/nr_requests
 ## END: Amktiao结束: 为主数据与系统分区调整预读与NR参数 (sda-sde)
+## ADD: Amktiao添加: 为dm加密设备调整预读与NR参数 (userdata)
+echo "128" > /sys/block/${userdata}/queue/read_ahead_kb
+echo "36" > /sys/block/${userdata}/queue/nr_requests
+## END: Amktiao结束: 为dm加密设备调整预读与NR参数 (userdata)
+
