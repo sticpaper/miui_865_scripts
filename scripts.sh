@@ -73,3 +73,6 @@ echo "0" > /sys/module/subsystem_restart/parameters/enable_ramdumps
 # 仅保留内核日志 (kernel dmesg)
 echo "off" > /proc/sys/kernel/printk_devkmsg
 ## END: Amktiao结束: 仅保留内核日志 (kernel dmesg)
+## ADD: Amktiao添加: 更改脏页回写时间 (30s 秒)
+echo "3000" > /proc/sys/vm/dirty_expire_centisecs
+## END: Amktiao结束: 更改脏页回写时间 (30s 秒)
