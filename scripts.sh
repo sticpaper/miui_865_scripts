@@ -95,3 +95,11 @@ echo "20" > /proc/sys/vm/stat_interval
 # 禁用sched_autogroup (在移动端设备上无用)
 echo "0" > /proc/sys/kernel/sched_autogroup_enabled
 ## END: Amktiao结束: 禁用 禁用sched_autogroup
+## ADD: Amktiao添加: 清理小米杂项
+# 删除不必要网络日志 (位于/data/vendor/wifi_logs)
+stop cnss_diag
+rm -rf /data/vendor/wlan_logs
+
+# 禁用小米程序调试
+setprop sys.miui.ndcd off
+## END: Amktiao结束: 清理小米杂项
