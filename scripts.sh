@@ -76,3 +76,7 @@ echo "off" > /proc/sys/kernel/printk_devkmsg
 ## ADD: Amktiao添加: 更改脏页回写时间 (30s 秒)
 echo "3000" > /proc/sys/vm/dirty_expire_centisecs
 ## END: Amktiao结束: 更改脏页回写时间 (30s 秒)
+## ADD: Amktiao添加: 禁用f2fs I/O数据收集统计 (用于调试)
+# 禁用f2fs I/O数据收集统计 (用于调试, Android R 加入)
+echo "0" > /sys/fs/f2fs/${userdata}/iostat_enable
+## END: Amktiao结束: 禁用f2fs I/O数据收集统计 (用于调试)
