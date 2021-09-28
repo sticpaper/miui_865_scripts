@@ -69,3 +69,7 @@ echo "0" > /proc/sys/vm/page-cluster
 # 禁用subsystem_ramdumps
 echo "0" > /sys/module/subsystem_restart/parameters/enable_ramdumps
 ## END: Amktiao结束: 禁用subsystem_ramdumps
+## ADD: Amktiao添加: 仅保留内核日志 (kernel dmesg)
+# 仅保留内核日志 (kernel dmesg)
+echo "off" > /proc/sys/kernel/printk_devkmsg
+## END: Amktiao结束: 仅保留内核日志 (kernel dmesg)
