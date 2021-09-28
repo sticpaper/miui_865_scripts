@@ -65,3 +65,7 @@ echo "36" > /sys/block/zram0/queue/nr_requests
 ## ADD: Amktiao添加: 调整页面簇 (low-mem)
 echo "0" > /proc/sys/vm/page-cluster
 ## END: Amktiao结束: 调整页面簇 (low-mem)
+## ADD: Amktiao添加: 禁用subsystem_ramdumps
+# 禁用subsystem_ramdumps
+echo "0" > /sys/module/subsystem_restart/parameters/enable_ramdumps
+## END: Amktiao结束: 禁用subsystem_ramdumps
