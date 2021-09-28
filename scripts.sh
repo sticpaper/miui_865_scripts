@@ -47,3 +47,9 @@ echo "0" > /sys/module/msm_show_resume_irq/parameters/debug_mask
 # 由于我们使用库存内核, 使用标志"nodebugmon" 是最好的
 echo "N" > /sys/kernel/debug/debug_enabled
 ## END: Amktiao结束: 禁用内核调试监视器 (self-hosted debug)
+## ADD: Amktiao添加: 为主数据与系统分区调整预读与NR参数 (sda-sde)
+echo "128" > /sys/block/sda/queue/read_ahead_kb
+echo "36" > /sys/block/sda/queue/nr_requests
+echo "128" > /sys/block/sde/queue/read_ahead_kb
+echo "36" > /sys/block/sde/queue/nr_requests
+## END: Amktiao结束: 为主数据与系统分区调整预读与NR参数 (sda-sde)
