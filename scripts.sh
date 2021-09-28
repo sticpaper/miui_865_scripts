@@ -80,3 +80,10 @@ echo "3000" > /proc/sys/vm/dirty_expire_centisecs
 # 禁用f2fs I/O数据收集统计 (用于调试, Android R 加入)
 echo "0" > /sys/fs/f2fs/${userdata}/iostat_enable
 ## END: Amktiao结束: 禁用f2fs I/O数据收集统计 (用于调试)
+## ADD: Amktiao添加: 禁用schedstats (sched)
+# sched_schedstats:
+# Enables/disables scheduler statistics. Enabling this feature
+# incurs a small amount of overhead in the scheduler but is
+# useful for debugging and performance tuning.
+echo "0" > /proc/sys/kernel/sched_schedstats
+## END: Amktiao结束: 禁用schedstats (sched)
