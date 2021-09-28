@@ -43,3 +43,7 @@ echo "0" > /sys/module/binder_alloc/parameters/debug_mask
 # 注意: 此功能用于调试耗电记录
 echo "0" > /sys/module/msm_show_resume_irq/parameters/debug_mask
 ## END: Amktiao结束: 禁用irq唤醒线程记录
+## ADD: Amktiao添加: 禁用内核调试监视器 (self-hosted debug)
+# 由于我们使用库存内核, 使用标志"nodebugmon" 是最好的
+echo "N" > /sys/kernel/debug/debug_enabled
+## END: Amktiao结束: 禁用内核调试监视器 (self-hosted debug)
