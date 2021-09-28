@@ -39,3 +39,7 @@ echo "0" > /sys/block/sdf/queue/iostats
 echo "0" > /sys/module/binder/parameters/debug_mask
 echo "0" > /sys/module/binder_alloc/parameters/debug_mask
 ## END: Amktiao结束: 禁用binder与分配工具的日志
+## ADD: Amktiao添加: 禁用irq唤醒线程记录
+# 注意: 此功能用于调试耗电记录
+echo "0" > /sys/module/msm_show_resume_irq/parameters/debug_mask
+## END: Amktiao结束: 禁用irq唤醒线程记录
