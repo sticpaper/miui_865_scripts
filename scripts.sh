@@ -25,3 +25,12 @@
 ## ADD: Amktiao添加: 设置获取userdata分区变量 (f2fs需要)
 userdata=$(getprop dev.mnt.blk.data)
 ## END: Amktiao结束: 设置获取userdata分区变量 (f2fs需要)
+## ADD: Amktiao添加: 禁用sd<x>分区的I/O读写统计
+# 禁用磁盘I/O统计 (来自: kdrag0n)
+echo "0" > /sys/block/sda/queue/iostats
+echo "0" > /sys/block/sdb/queue/iostats
+echo "0" > /sys/block/sdc/queue/iostats
+echo "0" > /sys/block/sdd/queue/iostats
+echo "0" > /sys/block/sde/queue/iostats
+echo "0" > /sys/block/sdf/queue/iostats
+## END: Amktiao结束: 禁用sd<x>分区的I/O读写统计
