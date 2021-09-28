@@ -87,3 +87,7 @@ echo "0" > /sys/fs/f2fs/${userdata}/iostat_enable
 # useful for debugging and performance tuning.
 echo "0" > /proc/sys/kernel/sched_schedstats
 ## END: Amktiao结束: 禁用schedstats (sched)
+## ADD: Amktiao添加: 调整内存统计间隔 (默认为1, 也就是1秒)
+# 调整内存统计间隔 (默认为1, 也就是1秒)
+echo "20" > /proc/sys/vm/stat_interval
+## END: Amktiao结束: 调整内存统计间隔 (默认为1, 也就是1秒)
